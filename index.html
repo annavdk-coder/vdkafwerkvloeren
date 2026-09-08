@@ -3,496 +3,394 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta name="theme-color" content="#111315">
   <title>VDK Afwerkvloeren | Zandcementvloeren Nieuwegein</title>
-
-  <meta name="description"
-        content="VDK Afwerkvloeren uit Nieuwegein voor strakke en duurzame zandcementvloeren. Voor particulieren en bedrijven. Vraag vrijblijvend een offerte aan.">
-
+  <meta name="description" content="VDK Afwerkvloeren uit Nieuwegein voor strakke zandcementvloeren bij nieuwbouw, renovatie, vloerverwarming, overkappingen en buitenruimtes. Vraag vrijblijvend een offerte aan.">
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    :root{
+      --bg:#111315;
+      --bg2:#181b1e;
+      --orange:#ff8a16;
+      --orange2:#ff9c32;
+      --white:#fff;
+      --muted:#c7cbd0;
+      --light:#f4f4f4;
+      --line:#30343a;
+      --max:1180px;
     }
-
-    html {
-      scroll-behavior: smooth;
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Arial,Helvetica,sans-serif;
+      color:#17191b;
+      background:#fff;
+      line-height:1.55;
     }
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+    .wrap{width:min(var(--max),calc(100% - 38px));margin:auto}
+    .eyebrow{color:var(--orange);font-weight:900;letter-spacing:.06em;text-transform:uppercase;font-size:.84rem}
+    h1,h2,h3,p{margin-top:0}
+    h1,h2,h3{line-height:1.06}
+    .section{padding:72px 0}
+    .section-title{text-align:center;max-width:760px;margin:0 auto 38px}
+    .section-title h2{font-size:clamp(2rem,4vw,3rem);margin:8px 0 12px}
+    .section-title p{color:#5d6268;font-size:1.05rem}
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      color: #202020;
-      line-height: 1.6;
-      background: #ffffff;
+    /* Header */
+    .site-header{
+      position:sticky;top:0;z-index:1000;
+      background:rgba(17,19,21,.96);
+      border-bottom:1px solid rgba(255,255,255,.07);
+      backdrop-filter:blur(9px);
     }
-
-    header {
-      background: #111;
-      color: white;
-      padding: 18px 7%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 100;
+    .nav{
+      min-height:86px;display:flex;align-items:center;justify-content:space-between;gap:24px
     }
-
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
+    .brand{display:flex;align-items:center;gap:12px;color:#fff;min-width:max-content}
+    .brand-mark{
+      width:58px;height:58px;background:var(--orange);
+      clip-path:polygon(50% 0,100% 28%,100% 100%,0 100%,0 28%);
+      display:grid;place-items:center;padding-top:10px
     }
-
-    .logo span {
-      color: #e3b54a;
+    .brand-lines{display:flex;flex-direction:column;gap:6px;transform:skewY(-8deg)}
+    .brand-lines i{display:block;width:26px;height:5px;background:#17191b;border-radius:3px}
+    .brand-copy strong{display:block;font-size:2rem;line-height:.9;letter-spacing:-.04em}
+    .brand-copy small{display:block;font-weight:900;font-size:.88rem;letter-spacing:.03em;margin-top:5px}
+    .navlinks{display:flex;gap:26px;color:#fff;font-weight:700;font-size:.93rem}
+    .navlinks a:hover{color:var(--orange)}
+    .nav-actions{display:flex;gap:10px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:9px;
+      padding:13px 19px;border-radius:7px;font-weight:900;border:1px solid transparent;
+      transition:.2s ease;cursor:pointer
     }
+    .btn:hover{transform:translateY(-1px)}
+    .btn-orange{background:var(--orange);color:#111}
+    .btn-outline{border-color:#d8d8d8;color:#fff;background:transparent}
+    .btn-dark{background:#17191b;color:#fff}
+    .mobile-menu{display:none;color:#fff;font-size:1.8rem}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 25px;
-      font-weight: bold;
+    /* Hero */
+    .hero{
+      position:relative;min-height:610px;color:#fff;background:#101214;overflow:hidden
     }
-
-    nav a:hover {
-      color: #e3b54a;
+    .hero::after{
+      content:"";position:absolute;inset:0;
+      background:linear-gradient(90deg,rgba(7,9,10,.96) 0%,rgba(7,9,10,.82) 32%,rgba(7,9,10,.18) 67%,rgba(7,9,10,.12) 100%);
+      pointer-events:none
     }
-
-    .hero {
-      min-height: 72vh;
-      background:
-        linear-gradient(rgba(0,0,0,.68), rgba(0,0,0,.68)),
-        linear-gradient(135deg, #555, #111);
-      color: white;
-      display: flex;
-      align-items: center;
-      padding: 70px 7%;
+    .hero-bg{
+      position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center
     }
-
-    .hero-content {
-      max-width: 750px;
+    .hero-inner{
+      min-height:610px;position:relative;z-index:2;display:flex;align-items:center;padding:70px 0
     }
-
-    .hero h1 {
-      font-size: clamp(38px, 6vw, 70px);
-      line-height: 1.05;
-      margin-bottom: 20px;
+    .hero-copy{max-width:610px}
+    .hero h1{font-size:clamp(3rem,6vw,5.4rem);margin:0 0 20px;letter-spacing:-.035em}
+    .hero h1 span{color:var(--orange)}
+    .hero .lead{color:#f2f2f2;font-size:1.18rem;max-width:590px;margin-bottom:28px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:30px}
+    .trust-row{display:flex;flex-wrap:wrap;gap:28px;color:#fff;font-weight:800;font-size:.92rem}
+    .trust-row span{display:flex;align-items:center;gap:8px}
+    .trust-dot{width:12px;height:12px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 4px rgba(255,138,22,.15)}
+    .scribble{
+      position:absolute;right:6%;bottom:70px;z-index:2;
+      color:#fff;font-size:1.45rem;font-style:italic;transform:rotate(-7deg);
+      max-width:230px;text-align:center;text-shadow:0 2px 10px rgba(0,0,0,.4)
     }
+    .scribble::after{content:"↙";display:block;font-size:3.5rem;line-height:.7;margin-top:10px;color:#fff}
 
-    .hero h1 span {
-      color: #e3b54a;
+    /* Services */
+    .services{background:#fff}
+    .service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+    .service-card{
+      background:#fff;border:1px solid #ececec;border-radius:10px;overflow:hidden;
+      box-shadow:0 8px 24px rgba(0,0,0,.06)
     }
-
-    .hero p {
-      font-size: 21px;
-      max-width: 650px;
-      margin-bottom: 30px;
+    .service-card img{height:190px;width:100%;object-fit:cover}
+    .service-body{padding:22px}
+    .service-icon{
+      margin-top:-44px;margin-bottom:15px;width:54px;height:54px;background:var(--orange);
+      border-radius:8px;display:grid;place-items:center;font-size:1.55rem;font-weight:900;
+      position:relative;border:5px solid #fff
     }
+    .service-card h3{font-size:1.25rem;margin-bottom:10px}
+    .service-card p{color:#5f6469;margin-bottom:0}
 
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
+    /* proof strip */
+    .proof{background:var(--bg);color:#fff;padding:18px 0}
+    .proof-row{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+    .proof-item{padding:7px 24px;border-right:1px solid var(--line);font-weight:800;display:flex;gap:10px;align-items:center}
+    .proof-item:last-child{border-right:0}
+    .check{color:var(--orange);font-size:1.25rem}
+
+    /* Projects */
+    .projects{background:#f7f7f7}
+    .gallery{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
+    .gallery figure{margin:0;overflow:hidden;border-radius:8px;background:#ddd;aspect-ratio:1/1}
+    .gallery img{width:100%;height:100%;object-fit:cover;transition:.25s}
+    .gallery figure:hover img{transform:scale(1.035)}
+
+    /* About */
+    .about{background:linear-gradient(135deg,#14171a,#0f1113);color:#fff}
+    .about-grid{display:grid;grid-template-columns:1.25fr .85fr .7fr;gap:46px;align-items:center}
+    .about h2{font-size:clamp(2rem,4vw,3.1rem);margin:10px 0 18px}
+    .about p{color:#d4d6d9}
+    .bullets{list-style:none;padding:0;margin:18px 0 0}
+    .bullets li{margin:11px 0;font-weight:700}
+    .bullets li::before{content:"✓";color:#111;background:var(--orange);width:22px;height:22px;display:inline-grid;place-items:center;border-radius:50%;margin-right:10px;font-size:.78rem}
+    .about-logo{
+      border-left:1px solid #363a3f;border-right:1px solid #363a3f;
+      padding:32px;text-align:center
     }
+    .about-logo .brand{justify-content:center;flex-direction:column}
+    .about-logo .brand-mark{width:88px;height:88px}
+    .about-logo .brand-copy strong{font-size:3.6rem}
+    .about-logo .brand-copy small{font-size:1.15rem}
+    .workarea h3{font-size:1.6rem;margin:8px 0 12px}
+    .workarea .city{font-size:1.25rem;font-weight:900}
+    .contact-lines{margin-top:20px;color:#ddd}
+    .contact-lines a{display:block;margin:7px 0}
+    .contact-lines strong{color:var(--orange);display:inline-block;width:26px}
 
-    .btn {
-      display: inline-block;
-      padding: 15px 24px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: .2s;
+    /* CTA */
+    .cta{background:var(--orange);padding:28px 0}
+    .cta-row{display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .cta h2{margin:0 0 3px;font-size:1.8rem}
+    .cta p{margin:0}
+    .cta-actions{display:flex;gap:10px;flex-wrap:wrap}
+
+    footer{background:#0c0e10;color:#c7c9cc;padding:34px 0 18px}
+    .footer-row{display:flex;justify-content:space-between;gap:25px;align-items:flex-start;flex-wrap:wrap}
+    .footer-links{display:flex;gap:22px;flex-wrap:wrap;padding-top:10px}
+    .footer-copy{border-top:1px solid #25282c;margin-top:28px;padding-top:18px;font-size:.82rem;color:#8b9095}
+
+    @media (max-width: 980px){
+      .navlinks{display:none}
+      .service-grid{grid-template-columns:repeat(2,1fr)}
+      .gallery{grid-template-columns:repeat(3,1fr)}
+      .about-grid{grid-template-columns:1fr 1fr}
+      .about-logo{border-right:0}
+      .workarea{grid-column:1/-1}
     }
-
-    .btn-primary {
-      background: #e3b54a;
-      color: #111;
-    }
-
-    .btn-dark {
-      background: #222;
-      color: white;
-      border: 1px solid #555;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-    }
-
-    section {
-      padding: 80px 7%;
-    }
-
-    .section-title {
-      text-align: center;
-      max-width: 750px;
-      margin: 0 auto 45px;
-    }
-
-    .section-title h2 {
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
-
-    .section-title p {
-      color: #666;
-      font-size: 18px;
-    }
-
-    .services {
-      background: #f4f4f4;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-      max-width: 1150px;
-      margin: auto;
-    }
-
-    .card {
-      background: white;
-      padding: 32px;
-      border-radius: 8px;
-      box-shadow: 0 4px 18px rgba(0,0,0,.07);
-    }
-
-    .card h3 {
-      margin-bottom: 12px;
-      font-size: 22px;
-    }
-
-    .card-icon {
-      font-size: 34px;
-      margin-bottom: 15px;
-    }
-
-    .about-wrap {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-      max-width: 1150px;
-      margin: auto;
-    }
-
-    .about h2 {
-      font-size: 38px;
-      margin-bottom: 20px;
-    }
-
-    .about p {
-      margin-bottom: 18px;
-      font-size: 18px;
-    }
-
-    .checklist {
-      list-style: none;
-      margin-top: 25px;
-    }
-
-    .checklist li {
-      margin-bottom: 12px;
-      font-weight: bold;
-    }
-
-    .checklist li::before {
-      content: "✓";
-      color: #b78c22;
-      margin-right: 10px;
-    }
-
-    .about-box {
-      background: #111;
-      color: white;
-      padding: 45px;
-      border-radius: 8px;
-    }
-
-    .about-box strong {
-      display: block;
-      color: #e3b54a;
-      font-size: 22px;
-      margin-bottom: 5px;
-    }
-
-    .cta {
-      background: #e3b54a;
-      text-align: center;
-    }
-
-    .cta h2 {
-      font-size: 38px;
-      margin-bottom: 15px;
-    }
-
-    .cta p {
-      font-size: 19px;
-      margin-bottom: 25px;
-    }
-
-    .cta .btn-dark {
-      border: none;
-    }
-
-    footer {
-      background: #111;
-      color: #ddd;
-      padding: 45px 7%;
-    }
-
-    .footer-wrap {
-      max-width: 1150px;
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-      gap: 30px;
-      flex-wrap: wrap;
-    }
-
-    footer h3 {
-      color: white;
-      margin-bottom: 10px;
-    }
-
-    footer a {
-      color: #e3b54a;
-      text-decoration: none;
-    }
-
-    .copyright {
-      max-width: 1150px;
-      margin: 35px auto 0;
-      border-top: 1px solid #333;
-      padding-top: 20px;
-      font-size: 14px;
-      color: #888;
-    }
-
-    @media (max-width: 800px) {
-      header {
-        padding: 16px 5%;
-      }
-
-      nav {
-        display: none;
-      }
-
-      .hero {
-        padding: 60px 5%;
-      }
-
-      section {
-        padding: 60px 5%;
-      }
-
-      .cards {
-        grid-template-columns: 1fr;
-      }
-
-      .about-wrap {
-        grid-template-columns: 1fr;
-        gap: 30px;
-      }
-
-      .hero p {
-        font-size: 18px;
-      }
+    @media (max-width: 720px){
+      .wrap{width:min(var(--max),calc(100% - 26px))}
+      .nav{min-height:74px}
+      .brand-mark{width:48px;height:48px}
+      .brand-copy strong{font-size:1.6rem}
+      .brand-copy small{font-size:.72rem}
+      .nav-actions .btn{display:none}
+      .mobile-menu{display:block}
+      .hero,.hero-inner{min-height:620px}
+      .hero::after{background:linear-gradient(180deg,rgba(8,9,10,.64),rgba(8,9,10,.95) 68%)}
+      .hero-inner{align-items:flex-end;padding-bottom:52px}
+      .scribble{display:none}
+      .trust-row{gap:14px 20px}
+      .service-grid{grid-template-columns:1fr}
+      .proof-row{grid-template-columns:1fr 1fr}
+      .proof-item{border-right:0;border-bottom:1px solid var(--line)}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+      .about-grid{grid-template-columns:1fr}
+      .about-logo{border:0;border-top:1px solid #363a3f;border-bottom:1px solid #363a3f}
+      .cta-row{align-items:flex-start;flex-direction:column}
+      .section{padding:56px 0}
     }
   </style>
 </head>
-
 <body>
 
-<header>
-  <div class="logo">VDK <span>AFWERKVLOEREN</span></div>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="#home" aria-label="VDK Afwerkvloeren home">
+      <span class="brand-mark"><span class="brand-lines"><i></i><i></i><i></i></span></span>
+      <span class="brand-copy"><strong>VDK</strong><small>AFWERKVLOEREN</small></span>
+    </a>
 
-  <nav>
-    <a href="#diensten">Diensten</a>
-    <a href="#over">Over ons</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <nav class="navlinks" aria-label="Hoofdnavigatie">
+      <a href="#home">Home</a>
+      <a href="#diensten">Diensten</a>
+      <a href="#projecten">Projecten</a>
+      <a href="#over-ons">Over ons</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a class="btn btn-orange" href="https://wa.me/31636556363?text=Hallo%20VDK%20Afwerkvloeren,%20ik%20wil%20graag%20een%20vrijblijvende%20offerte%20aanvragen." target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn btn-outline" href="tel:+31636556363">☎ 06 36 55 63 63</a>
+    </div>
+    <div class="mobile-menu">☰</div>
+  </div>
 </header>
 
-
-<section class="hero">
-  <div class="hero-content">
-
-    <h1>Strakke & duurzame <span>zandcementvloeren</span></h1>
-
-    <p>
-      Professioneel aangelegde zandcementvloeren voor particulieren
-      en bedrijven. Een sterke en vlakke basis voor tegels, PVC,
-      parket en meer.
-    </p>
-
-    <div class="buttons">
-      <a class="btn btn-primary"
-         href="https://wa.me/31636556363">
-         WhatsApp voor offerte
-      </a>
-
-      <a class="btn btn-dark"
-         href="tel:0636556363">
-         Bel 06 36 55 63 63
-      </a>
+<main>
+  <section class="hero" id="home">
+    <img class="hero-bg" src="assets/project-1.jpg" alt="Strak afgewerkte zandcementvloer door VDK Afwerkvloeren">
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <div class="eyebrow">VDK Afwerkvloeren • Nieuwegein</div>
+        <h1>Zandcementvloeren voor <span>renovatie & nieuwbouw</span></h1>
+        <p class="lead">Strakke, duurzame en vlakke vloeren voor particulieren en bedrijven. Een sterke ondergrond voor tegels, PVC, parket en meer.</p>
+        <div class="hero-actions">
+          <a class="btn btn-orange" href="https://wa.me/31636556363?text=Hallo%20VDK%20Afwerkvloeren,%20ik%20wil%20graag%20een%20vrijblijvende%20offerte%20aanvragen." target="_blank" rel="noopener">WhatsApp voor offerte</a>
+          <a class="btn btn-outline" href="tel:+31636556363">☎ Bel 06 36 55 63 63</a>
+        </div>
+        <div class="trust-row">
+          <span><i class="trust-dot"></i>Betrouwbaarheid</span>
+          <span><i class="trust-dot"></i>Kwaliteit</span>
+          <span><i class="trust-dot"></i>Vakmanschap</span>
+          <span><i class="trust-dot"></i>Scherpe prijzen</span>
+        </div>
+      </div>
     </div>
+    <div class="scribble">De basis voor iedere perfecte vloer</div>
+  </section>
 
-  </div>
-</section>
+  <section class="section services" id="diensten">
+    <div class="wrap">
+      <div class="section-title">
+        <div class="eyebrow">Onze diensten</div>
+        <h2>Waar wij u mee kunnen helpen</h2>
+        <p>Van woning en bedrijfspand tot vloerverwarming, renovatie en buitenruimte.</p>
+      </div>
 
+      <div class="service-grid">
+        <article class="service-card">
+          <img src="assets/project-3.jpg" alt="Zandcementvloer in een bedrijfspand">
+          <div class="service-body">
+            <div class="service-icon">≡</div>
+            <h3>Zandcementvloeren</h3>
+            <p>Sterke en duurzame zandcementvloeren voor nieuwbouw, verbouwing en renovatie.</p>
+          </div>
+        </article>
 
-<section class="services" id="diensten">
+        <article class="service-card">
+          <img src="assets/project-4.jpg" alt="Zandcementvloer rondom installaties">
+          <div class="service-body">
+            <div class="service-icon">≈</div>
+            <h3>Op vloerverwarming</h3>
+            <p>Professionele afwerking boven vloerverwarming voor een vlak en sterk eindresultaat.</p>
+          </div>
+        </article>
 
-  <div class="section-title">
-    <h2>Onze zandcementvloeren</h2>
-    <p>
-      Een stevige en professioneel afgewerkte ondergrond voor uw vloer.
-    </p>
-  </div>
+        <article class="service-card">
+          <img src="assets/project-9.jpg" alt="Zandcementvloer bij renovatie">
+          <div class="service-body">
+            <div class="service-icon">↻</div>
+            <h3>Renovatie & nieuwbouw</h3>
+            <p>Voor woningen, bedrijfspanden en andere projecten waar een nieuwe dekvloer nodig is.</p>
+          </div>
+        </article>
 
-  <div class="cards">
-
-    <div class="card">
-      <div class="card-icon">◆</div>
-      <h3>Strak afgewerkt</h3>
-      <p>
-        Wij zorgen voor een vlakke en strakke zandcementvloer
-        die klaar is voor de verdere vloerafwerking.
-      </p>
+        <article class="service-card">
+          <img src="assets/project-7.jpg" alt="Zandcementvloer in een buitenruimte">
+          <div class="service-body">
+            <div class="service-icon">⌂</div>
+            <h3>Tuinen & overkappingen</h3>
+            <p>Ook voor terrassen, veranda's, overkappingen en andere beschutte buitenruimtes.</p>
+          </div>
+        </article>
+      </div>
     </div>
+  </section>
 
-    <div class="card">
-      <div class="card-icon">◆</div>
-      <h3>Sterke ondergrond</h3>
-      <p>
-        Een duurzame basis voor onder andere tegels, PVC,
-        parket en andere vloerafwerkingen.
-      </p>
+  <div class="proof">
+    <div class="wrap proof-row">
+      <div class="proof-item"><span class="check">●</span>Voor particulieren en bedrijven</div>
+      <div class="proof-item"><span class="check">●</span>Eigen materialen</div>
+      <div class="proof-item"><span class="check">●</span>Snel schakelen</div>
+      <div class="proof-item"><span class="check">●</span>Vrijblijvende offerte</div>
     </div>
-
-    <div class="card">
-      <div class="card-icon">◆</div>
-      <h3>Snel schakelen</h3>
-      <p>
-        Doordat wij zelf over de benodigde materialen beschikken,
-        kunnen we efficiënt werken en de kosten scherp houden.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-
-<section class="about" id="over">
-
-  <div class="about-wrap">
-
-    <div>
-      <h2>VDK Afwerkvloeren</h2>
-
-      <p>
-        Vanuit Nieuwegein leveren wij strakke en duurzame
-        zandcementvloeren voor zowel particulieren als bedrijven.
-      </p>
-
-      <p>
-        Wij staan voor vakmanschap, duidelijke afspraken en een
-        professioneel eindresultaat tegen een scherpe prijs.
-      </p>
-
-      <ul class="checklist">
-        <li>Strakke en vlakke afwerking</li>
-        <li>Voor particulieren en bedrijven</li>
-        <li>Betrouwbare en professionele service</li>
-        <li>Scherpe prijs</li>
-        <li>Vrijblijvende offerte</li>
-      </ul>
-    </div>
-
-    <div class="about-box">
-      <strong>Werkgebied</strong>
-      <p>Nieuwegein en omgeving</p>
-
-      <br>
-
-      <strong>Telefonisch bereikbaar</strong>
-      <p>
-        <a href="tel:0636556363">06 36 55 63 63</a>
-      </p>
-
-      <br>
-
-      <strong>Offerte aanvragen</strong>
-      <p>
-        Stuur ons eenvoudig een WhatsApp-bericht met informatie
-        over de oppervlakte en uw project.
-      </p>
-    </div>
-
   </div>
 
-</section>
+  <section class="section projects" id="projecten">
+    <div class="wrap">
+      <div class="section-title">
+        <div class="eyebrow">Recente projecten</div>
+        <h2>Een greep uit ons werk</h2>
+        <p>Eigen projecten van VDK Afwerkvloeren.</p>
+      </div>
 
+      <div class="gallery">
+        <figure><img src="assets/project-1.jpg" alt="Afgewerkte zandcementvloer project 1"></figure>
+        <figure><img src="assets/project-2.jpg" alt="Afgewerkte zandcementvloer project 2"></figure>
+        <figure><img src="assets/project-3.jpg" alt="Afgewerkte zandcementvloer project 3"></figure>
+        <figure><img src="assets/project-4.jpg" alt="Afgewerkte zandcementvloer project 4"></figure>
+        <figure><img src="assets/project-5.jpg" alt="Afgewerkte zandcementvloer project 5"></figure>
+        <figure><img src="assets/project-7.jpg" alt="Zandcementvloer buitenruimte"></figure>
+      </div>
+    </div>
+  </section>
 
-<section class="cta" id="contact">
+  <section class="section about" id="over-ons">
+    <div class="wrap about-grid">
+      <div>
+        <div class="eyebrow">Over VDK Afwerkvloeren</div>
+        <h2>Betrouwbaar, betaalbaar en professioneel</h2>
+        <p>Vanuit Nieuwegein leveren wij strakke en duurzame zandcementvloeren voor zowel particulieren als bedrijven. Doordat wij zelf over de benodigde materialen beschikken, kunnen we snel schakelen en de kosten scherp houden.</p>
+        <p>Wij staan voor duidelijke afspraken, vakmanschap en een strak eindresultaat.</p>
+        <ul class="bullets">
+          <li>Strakke en vlakke afwerking</li>
+          <li>Scherpe prijzen</li>
+          <li>Snelle en professionele service</li>
+          <li>Voor particulieren en bedrijven</li>
+          <li>Vrijblijvende offerte</li>
+        </ul>
+      </div>
 
-  <h2>Een zandcementvloer nodig?</h2>
+      <div class="about-logo">
+        <div class="brand">
+          <span class="brand-mark"><span class="brand-lines"><i></i><i></i><i></i></span></span>
+          <span class="brand-copy"><strong>VDK</strong><small>AFWERKVLOEREN</small></span>
+        </div>
+      </div>
 
-  <p>
-    Neem contact op voor een vrijblijvende offerte.
-  </p>
+      <div class="workarea" id="contact">
+        <div class="eyebrow">Ons werkgebied</div>
+        <h3>Nieuwegein en omgeving</h3>
+        <p>Neem contact op om te bespreken of uw project binnen ons werkgebied valt.</p>
+        <div class="contact-lines">
+          <a href="tel:+31636556363"><strong>☎</strong>06 36 55 63 63</a>
+          <a href="mailto:erwin_vanderklis@hotmail.com"><strong>✉</strong>erwin_vanderklis@hotmail.com</a>
+          <a href="https://wa.me/31636556363" target="_blank" rel="noopener"><strong>●</strong>WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <div class="buttons" style="justify-content:center;">
-
-    <a class="btn btn-dark"
-       href="https://wa.me/31636556363">
-       Offerte aanvragen via WhatsApp
-    </a>
-
-    <a class="btn btn-dark"
-       href="tel:0636556363">
-       Direct bellen
-    </a>
-
-  </div>
-
-</section>
-
+  <section class="cta">
+    <div class="wrap cta-row">
+      <div>
+        <h2>Direct een vrijblijvende offerte aanvragen?</h2>
+        <p>Stuur een WhatsApp-bericht of bel direct.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn btn-dark" href="https://wa.me/31636556363?text=Hallo%20VDK%20Afwerkvloeren,%20ik%20wil%20graag%20een%20vrijblijvende%20offerte%20aanvragen." target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn" style="background:#fff;color:#111" href="tel:+31636556363">☎ 06 36 55 63 63</a>
+      </div>
+    </div>
+  </section>
+</main>
 
 <footer>
-
-  <div class="footer-wrap">
-
-    <div>
-      <h3>VDK Afwerkvloeren</h3>
-      <p>Nieuwegein</p>
-      <p>Zandcementvloeren voor particulier en bedrijf.</p>
+  <div class="wrap footer-row">
+    <a class="brand" href="#home">
+      <span class="brand-mark"><span class="brand-lines"><i></i><i></i><i></i></span></span>
+      <span class="brand-copy"><strong>VDK</strong><small>AFWERKVLOEREN</small></span>
+    </a>
+    <div class="footer-links">
+      <a href="#diensten">Diensten</a>
+      <a href="#projecten">Projecten</a>
+      <a href="#over-ons">Over ons</a>
+      <a href="#contact">Contact</a>
     </div>
-
-    <div>
-      <h3>Contact</h3>
-      <p>
-        Telefoon:
-        <a href="tel:0636556363">06 36 55 63 63</a>
-      </p>
-
-      <p>
-        <a href="https://wa.me/31636556363">
-          WhatsApp
-        </a>
-      </p>
-    </div>
-
   </div>
-
-  <div class="copyright">
-    © 2026 VDK Afwerkvloeren. Alle rechten voorbehouden.
-  </div>
-
+  <div class="wrap footer-copy">© <span id="year"></span> VDK Afwerkvloeren. Alle rechten voorbehouden.</div>
 </footer>
 
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
