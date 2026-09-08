@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>VDK Afwerkvloeren | Zandcementvloeren Nieuwegein</title>
+
+  <meta name="description"
+        content="VDK Afwerkvloeren uit Nieuwegein voor strakke en duurzame zandcementvloeren. Voor particulieren en bedrijven. Vraag vrijblijvend een offerte aan.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #202020;
+      line-height: 1.6;
+      background: #ffffff;
+    }
+
+    header {
+      background: #111;
+      color: white;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: #e3b54a;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #e3b54a;
+    }
+
+    .hero {
+      min-height: 72vh;
+      background:
+        linear-gradient(rgba(0,0,0,.68), rgba(0,0,0,.68)),
+        linear-gradient(135deg, #555, #111);
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 70px 7%;
+    }
+
+    .hero-content {
+      max-width: 750px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 6vw, 70px);
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #e3b54a;
+    }
+
+    .hero p {
+      font-size: 21px;
+      max-width: 650px;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 24px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: .2s;
+    }
+
+    .btn-primary {
+      background: #e3b54a;
+      color: #111;
+    }
+
+    .btn-dark {
+      background: #222;
+      color: white;
+      border: 1px solid #555;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    section {
+      padding: 80px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      max-width: 750px;
+      margin: 0 auto 45px;
+    }
+
+    .section-title h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #666;
+      font-size: 18px;
+    }
+
+    .services {
+      background: #f4f4f4;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      padding: 32px;
+      border-radius: 8px;
+      box-shadow: 0 4px 18px rgba(0,0,0,.07);
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      font-size: 22px;
+    }
+
+    .card-icon {
+      font-size: 34px;
+      margin-bottom: 15px;
+    }
+
+    .about-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    .about h2 {
+      font-size: 38px;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      margin-bottom: 18px;
+      font-size: 18px;
+    }
+
+    .checklist {
+      list-style: none;
+      margin-top: 25px;
+    }
+
+    .checklist li {
+      margin-bottom: 12px;
+      font-weight: bold;
+    }
+
+    .checklist li::before {
+      content: "✓";
+      color: #b78c22;
+      margin-right: 10px;
+    }
+
+    .about-box {
+      background: #111;
+      color: white;
+      padding: 45px;
+      border-radius: 8px;
+    }
+
+    .about-box strong {
+      display: block;
+      color: #e3b54a;
+      font-size: 22px;
+      margin-bottom: 5px;
+    }
+
+    .cta {
+      background: #e3b54a;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      font-size: 19px;
+      margin-bottom: 25px;
+    }
+
+    .cta .btn-dark {
+      border: none;
+    }
+
+    footer {
+      background: #111;
+      color: #ddd;
+      padding: 45px 7%;
+    }
+
+    .footer-wrap {
+      max-width: 1150px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    footer h3 {
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    footer a {
+      color: #e3b54a;
+      text-decoration: none;
+    }
+
+    .copyright {
+      max-width: 1150px;
+      margin: 35px auto 0;
+      border-top: 1px solid #333;
+      padding-top: 20px;
+      font-size: 14px;
+      color: #888;
+    }
+
+    @media (max-width: 800px) {
+      header {
+        padding: 16px 5%;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .hero {
+        padding: 60px 5%;
+      }
+
+      section {
+        padding: 60px 5%;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .about-wrap {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">VDK <span>AFWERKVLOEREN</span></div>
+
+  <nav>
+    <a href="#diensten">Diensten</a>
+    <a href="#over">Over ons</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+
+<section class="hero">
+  <div class="hero-content">
+
+    <h1>Strakke & duurzame <span>zandcementvloeren</span></h1>
+
+    <p>
+      Professioneel aangelegde zandcementvloeren voor particulieren
+      en bedrijven. Een sterke en vlakke basis voor tegels, PVC,
+      parket en meer.
+    </p>
+
+    <div class="buttons">
+      <a class="btn btn-primary"
+         href="https://wa.me/31636556363">
+         WhatsApp voor offerte
+      </a>
+
+      <a class="btn btn-dark"
+         href="tel:0636556363">
+         Bel 06 36 55 63 63
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="services" id="diensten">
+
+  <div class="section-title">
+    <h2>Onze zandcementvloeren</h2>
+    <p>
+      Een stevige en professioneel afgewerkte ondergrond voor uw vloer.
+    </p>
+  </div>
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="card-icon">◆</div>
+      <h3>Strak afgewerkt</h3>
+      <p>
+        Wij zorgen voor een vlakke en strakke zandcementvloer
+        die klaar is voor de verdere vloerafwerking.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">◆</div>
+      <h3>Sterke ondergrond</h3>
+      <p>
+        Een duurzame basis voor onder andere tegels, PVC,
+        parket en andere vloerafwerkingen.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">◆</div>
+      <h3>Snel schakelen</h3>
+      <p>
+        Doordat wij zelf over de benodigde materialen beschikken,
+        kunnen we efficiënt werken en de kosten scherp houden.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="about" id="over">
+
+  <div class="about-wrap">
+
+    <div>
+      <h2>VDK Afwerkvloeren</h2>
+
+      <p>
+        Vanuit Nieuwegein leveren wij strakke en duurzame
+        zandcementvloeren voor zowel particulieren als bedrijven.
+      </p>
+
+      <p>
+        Wij staan voor vakmanschap, duidelijke afspraken en een
+        professioneel eindresultaat tegen een scherpe prijs.
+      </p>
+
+      <ul class="checklist">
+        <li>Strakke en vlakke afwerking</li>
+        <li>Voor particulieren en bedrijven</li>
+        <li>Betrouwbare en professionele service</li>
+        <li>Scherpe prijs</li>
+        <li>Vrijblijvende offerte</li>
+      </ul>
+    </div>
+
+    <div class="about-box">
+      <strong>Werkgebied</strong>
+      <p>Nieuwegein en omgeving</p>
+
+      <br>
+
+      <strong>Telefonisch bereikbaar</strong>
+      <p>
+        <a href="tel:0636556363">06 36 55 63 63</a>
+      </p>
+
+      <br>
+
+      <strong>Offerte aanvragen</strong>
+      <p>
+        Stuur ons eenvoudig een WhatsApp-bericht met informatie
+        over de oppervlakte en uw project.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="cta" id="contact">
+
+  <h2>Een zandcementvloer nodig?</h2>
+
+  <p>
+    Neem contact op voor een vrijblijvende offerte.
+  </p>
+
+  <div class="buttons" style="justify-content:center;">
+
+    <a class="btn btn-dark"
+       href="https://wa.me/31636556363">
+       Offerte aanvragen via WhatsApp
+    </a>
+
+    <a class="btn btn-dark"
+       href="tel:0636556363">
+       Direct bellen
+    </a>
+
+  </div>
+
+</section>
+
+
+<footer>
+
+  <div class="footer-wrap">
+
+    <div>
+      <h3>VDK Afwerkvloeren</h3>
+      <p>Nieuwegein</p>
+      <p>Zandcementvloeren voor particulier en bedrijf.</p>
+    </div>
+
+    <div>
+      <h3>Contact</h3>
+      <p>
+        Telefoon:
+        <a href="tel:0636556363">06 36 55 63 63</a>
+      </p>
+
+      <p>
+        <a href="https://wa.me/31636556363">
+          WhatsApp
+        </a>
+      </p>
+    </div>
+
+  </div>
+
+  <div class="copyright">
+    © 2026 VDK Afwerkvloeren. Alle rechten voorbehouden.
+  </div>
+
+</footer>
+
+</body>
+</html>
