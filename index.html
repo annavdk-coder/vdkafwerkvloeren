@@ -70,7 +70,20 @@
     .btn-orange{background:var(--orange);color:#111}
     .btn-outline{border-color:#d8d8d8;color:#fff;background:transparent}
     .btn-dark{background:#17191b;color:#fff}
-    .mobile-menu{display:none;color:#fff;font-size:1.8rem}
+    .mobile-menu{
+  display:none;
+  color:var(--orange);
+  font-size:1.8rem;
+  background:#111315;
+  border:2px solid var(--orange);
+  border-radius:14px;
+  width:64px;
+  height:54px;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  padding:0;
+}
 
     /* Hero */
     .hero{
@@ -182,7 +195,7 @@
       .brand-copy strong{font-size:1.6rem}
       .brand-copy small{font-size:.72rem}
       .nav-actions .btn{display:none}
-      .mobile-menu{display:block}
+      .mobile-menu{display:flex}
       .navlinks.mobile-open{
   display:flex;
   position:absolute;
@@ -417,6 +430,11 @@
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+  document.querySelectorAll('.navlinks a').forEach(function(link) {
+  link.addEventListener('click', function() {
+    document.querySelector('.navlinks').classList.remove('mobile-open');
+  });
+});
 </script>
 </body>
 </html>
