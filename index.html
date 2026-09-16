@@ -183,6 +183,31 @@
       .brand-copy small{font-size:.72rem}
       .nav-actions .btn{display:none}
       .mobile-menu{display:block}
+      .navlinks.mobile-open{
+  display:flex;
+  position:absolute;
+  top:74px;
+  left:0;
+  right:0;
+  flex-direction:column;
+  align-items:center;
+  gap:0;
+  padding:12px 20px 20px;
+  background:#111315;
+  border-top:1px solid #30343a;
+}
+
+.navlinks.mobile-open a{
+  width:100%;
+  padding:14px 0;
+  text-align:center;
+  border-bottom:1px solid #30343a;
+}
+      .hero h1{
+  font-size:clamp(2.5rem,11vw,4rem);
+  line-height:1.02;
+  overflow-wrap:break-word;
+}
       .hero,.hero-inner{min-height:620px}
       .hero::after{background:linear-gradient(180deg,rgba(8,9,10,.64),rgba(8,9,10,.95) 68%)}
       .hero-inner{align-items:flex-end;padding-bottom:52px}
@@ -220,7 +245,7 @@
       <a class="btn btn-orange" href="https://wa.me/31636556363?text=Hallo%20VDK%20Afwerkvloeren,%20ik%20wil%20graag%20een%20vrijblijvende%20offerte%20aanvragen." target="_blank" rel="noopener">WhatsApp</a>
       <a class="btn btn-outline" href="tel:+31636556363">☎ 06 36 55 63 63</a>
     </div>
-    <div class="mobile-menu">☰</div>
+    <button class="mobile-menu" type="button" onclick="document.querySelector('.navlinks').classList.toggle('mobile-open')" aria-label="Menu openen">☰</button>
   </div>
 </header>
 
@@ -354,6 +379,7 @@
           <a href="tel:+31636556363"><strong>☎</strong>06 36 55 63 63</a>
           <a href="mailto:vdkafwerkvloeren@hotmail.com"><strong>✉</strong>vdkafwerkvloeren@hotmail.com</a>
           <a href="https://wa.me/31636556363" target="_blank" rel="noopener"><strong>●</strong>WhatsApp</a>
+          <a href="https://www.tiktok.com/@vdkafwerkvloeren.nl" target="_blank" rel="noopener"><strong>♫</strong>TikTok</a>
         </div>
       </div>
     </div>
